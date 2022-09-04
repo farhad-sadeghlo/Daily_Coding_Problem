@@ -8,9 +8,9 @@
 
 class max_subarray:
     def __init__(self, lst: list):
-        self.lst = lst.replace('[', '').replace(']', '').replace(' ', '').split(',')
+        self.lst = list(map(int, lst.rstrip().split()))
         self.the_sum = 0
-        print(self.lst)
+        # print(self.lst)
     def calc_max_subarray(self):
         for subarray in self.lst:
             subarray = int(subarray)
