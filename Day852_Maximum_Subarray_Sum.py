@@ -7,13 +7,35 @@
 # Given [-4, 5, 1, 0], return 6 as we choose the numbers 5 and 1.
 
 class max_subarray:
-    def __init__(self, lst: list):
+    def __init__(self, lst: list, subarray_length):
         self.lst = list(map(int, lst.rstrip().split()))
         self.the_sum = 0
-        # print(self.lst)
+        self.subarray_len = int(subarray_length)
+        self.subarray = []
+        self.subarray_and_indices = {}
     def calc_max_subarray(self):
-        for subarray in self.lst:
-            subarray = int(subarray)
+        counter = 0
+
+        self.lst_sorted = sorted(self.lst, reverse=True)
+
+        for subarray in self.lst_sorted:
+
             if subarray > 0:
+
                 self.the_sum += subarray
-        return print(self.the_sum)
+
+                self.subarray.append(subarray)
+
+                counter += 1
+
+                if counter == self.subarray_len:
+
+                    break
+
+        for i, num in enumerate(self.lst):
+
+            if num in self.subarray:
+
+                self.subarray_and_indices[i] = num
+
+        return print(self.the_sum, self.subarray_and_indices)

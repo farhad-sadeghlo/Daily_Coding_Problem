@@ -11,4 +11,4 @@ if __name__ == '__main__':
     # Elo(input('Rating of A: '), input('Rating of B: '), input('if A wins put 1, if B wins put 0: ')).get_rating
     # MonteCarlo(input('Please indicate how many iterations are needed: ')).pi_num_by_montecarlo()
     # listRotator(input('Please provide your list: '), input('Please provide rotating number: ')).rotator()
-    max_subarray(input('Please provide your list of numbers: ')).calc_max_subarray()
+    max_subarray(input('Please provide your list of numbers: '), input('what length of subarray do you like: ')).calc_max_subarray()
