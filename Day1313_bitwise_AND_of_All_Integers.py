@@ -3,7 +3,8 @@ class BitwiseAND():
         self.M = int(M)
         self.N = int(N)
     def Bitwise_AND(self):
-        result = self.M
-        for i in range(self.M + 1, self.N + 1):
-            result &= i
-        return print(result)
+        result = {}
+        for i in range(self.M, self.N):
+            for j in range(self.M + 1, self.N + 1):
+                result[str(i) + ' & ' + str(j)] = i & j
+        return result

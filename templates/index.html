@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitwise AND Result</title>
+    <link rel="stylesheet" href="../static/styles.css">
+<!--or we can write:
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">-->
+</head>
+<body>
+    <h1>Bitwise AND Result</h1>
+
+    <!-- Display the form for user input -->
+    <form method="post" action="/">
+        <label for="M">M:</label>
+        <input type="number" name="M" value="{{ request.form['M']|default(49) }}" required>
+        <br>
+        <label for="N">N:</label>
+        <input type="number" name="N" value="{{ request.form['N']|default(465) }}" required>
+        <br>
+        <button type="submit">Calculate Bitwise AND</button>
+    </form>
+
+    <!-- Display the result -->
+    {% if result is defined %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+
+    <p>Hello World, this is the BitwiseAND result from the new server.</p>
+</body>
+</html>
