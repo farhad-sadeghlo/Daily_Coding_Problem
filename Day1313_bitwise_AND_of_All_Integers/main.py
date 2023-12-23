@@ -10,7 +10,7 @@ from flask import Flask, render_template, request
 # from Day1311_push_pop_pull import PushPopPull
 from Day1313_bitwise_AND_of_All_Integers import BitwiseAND
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 logging.basicConfig(level=logging.DEBUG)
 @app.route('/', methods=['GET', 'POST'])
