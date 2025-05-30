@@ -13,6 +13,6 @@ class FibonacciNthO1space:
 
         return fib_lst[self.n - 1]
 
-#
+
 if __name__ == "__main__":
     print(FibonacciNthO1space(int(input('Please type in the fibonacci number of interest: '))).fib())
